@@ -25,24 +25,29 @@ This documentation provides comprehensive reference material for developers crea
 - [`setObject()`](docs/adapter-api.md#setobject) - Create/update objects
 - [`getObject()`](docs/adapter-api.md#getobject) - Retrieve objects
 - [`sendTo()`](docs/adapter-api.md#sendto) - Send messages between adapters
+- [`readFile()`](docs/files.md#reading-files) - Read files from adapter storage
+- [`writeFile()`](docs/files.md#writing-files) - Write files to adapter storage
 
 ### Essential Types
 - [`AdapterConfig`](docs/types.md#adapterconfig) - Adapter configuration interface
 - [`State`](docs/types.md#state) - State object definition
 - [`ioBrokerObject`](docs/types.md#iobrokerobject) - Base object interface
+- [`Message`](docs/types.md#message) - Inter-adapter message format
 
 ### Configuration Schema
-- [Common Properties](docs/io-package-schema.md#common) - Standard adapter properties
-- [Native Configuration](docs/io-package-schema.md#native) - Adapter-specific settings
-- [Instance Objects](docs/io-package-schema.md#instanceobjects) - Per-instance object definitions
+- [Common Properties](docs/io-package-schema.md#common-section) - Standard adapter properties
+- [Native Configuration](docs/io-package-schema.md#native-section) - Adapter-specific settings
+- [Instance Objects](docs/io-package-schema.md#instance-objects) - Per-instance object definitions
 
 ## Source References
 
 This documentation is generated from the ioBroker.js-controller source code:
-- Main repository: https://github.com/ioBroker/ioBroker.js-controller
-- Primary source: `packages/adapter/src/lib/adapter/adapter.ts`
-- Type definitions: `packages/adapter/src/lib/_Types.ts`, `packages/types-dev/index.d.ts`
-- Schema: `schemas/io-package.json`
+- **Main repository:** https://github.com/ioBroker/ioBroker.js-controller
+- **Primary source:** `packages/adapter/src/lib/adapter/adapter.ts` (485KB, 13,000+ lines)
+- **Type definitions:** `packages/adapter/src/lib/_Types.ts`, `packages/types-dev/index.d.ts`
+- **Schema:** `schemas/io-package.json` (4,200+ lines)
+- **Constants:** `packages/adapter/src/lib/adapter/constants.ts`
+- **Utilities:** `packages/adapter/src/lib/adapter/utils.ts`
 
 <!-- 
 Source metadata for automated updates:
@@ -55,11 +60,33 @@ Source metadata for automated updates:
 ## Documentation Structure
 
 Each documentation file is structured for quick navigation and includes:
-- Complete method signatures with parameters
-- Return type information
-- Usage examples
-- Cross-references to related functionality
-- Source file references for automated updates
+- **Complete method signatures** with parameters and return types
+- **TypeScript type information** for better development experience  
+- **Practical usage examples** with real-world scenarios
+- **Cross-references** to related functionality throughout the docs
+- **Source file references** for automated updates via Copilot
+- **Best practices** and common patterns
+
+### Navigation Tips
+- Use the table of contents above to jump to specific topics
+- Each file has its own detailed table of contents for quick navigation
+- Look for cross-reference links like [Event Handling](docs/events.md) throughout the documentation
+- Examples build from basic to advanced patterns within each topic
+- Error handling patterns are covered in [Error Handling](docs/errors.md) and referenced throughout
+
+### Topic Coverage
+- **[Getting Started](docs/getting-started.md)** - Perfect for new adapter developers
+- **[Adapter API](docs/adapter-api.md)** - Comprehensive method reference (100+ methods)
+- **[Types](docs/types.md)** - Complete TypeScript interfaces and type definitions
+- **[Constants](docs/constants.md)** - All available constants, quality codes, and enumerations
+- **[Utils](docs/utils.md)** - 50+ utility functions for common tasks
+- **[Schema](docs/io-package-schema.md)** - Full io-package.json specification with examples
+- **[Events](docs/events.md)** - Event-driven programming and message handling
+- **[States](docs/states.md)** - Working with ioBroker's core data model
+- **[Files](docs/files.md)** - File system operations and data persistence
+- **[Network](docs/network.md)** - HTTP clients, WebSockets, and inter-adapter communication
+- **[Errors](docs/errors.md)** - Robust error handling and recovery strategies
+- **[Best Practices](docs/best-practices.md)** - Production-ready patterns and conventions
 
 ## Contributing
 
